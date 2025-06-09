@@ -1,5 +1,7 @@
 # TO-DO App com Next.js 15 + Supabase
 
+![Preview](./.github/dashboard.jpg)
+
 ## 📋 Descrição do Projeto
 
 Este é um aplicativo de TO-DO (lista de tarefas) desenvolvido com Next.js 15, React (sem TypeScript), Tailwind CSS 4, Supabase e shadcn/ui. O projeto inclui sistema de autenticação completo e operações CRUD para gerenciamento de tarefas.
@@ -44,11 +46,13 @@ todo-supabase/
 ## 🔧 Configuração e Instalação
 
 ### 1. Pré-requisitos
+
 - Node.js 20+
 - npm ou yarn
 - Conta no Supabase
 
 ### 2. Instalação
+
 ```bash
 # Clone o projeto
 cd todo-supabase
@@ -65,6 +69,7 @@ npm install
 #### Tabelas necessárias:
 
 **Tabela `profiles`:**
+
 ```sql
 CREATE TABLE profiles (
   id UUID PRIMARY KEY DEFAULT auth.uid(),
@@ -74,6 +79,7 @@ CREATE TABLE profiles (
 ```
 
 **Tabela `todos`:**
+
 ```sql
 CREATE TABLE todos (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -85,6 +91,7 @@ CREATE TABLE todos (
 ```
 
 #### Configuração de RLS (Row Level Security):
+
 ```sql
 -- Habilitar RLS nas tabelas
 ALTER TABLE profiles ENABLE ROW LEVEL SECURITY;
@@ -115,6 +122,7 @@ CREATE POLICY "Users can delete own todos" ON todos
 ```
 
 ### 4. Executar o projeto
+
 ```bash
 npm run dev
 ```
@@ -124,6 +132,7 @@ O projeto estará disponível em `http://localhost:3000`
 ## 🎯 Funcionalidades
 
 ### ✅ Implementadas:
+
 - **Autenticação completa**: Login, cadastro e logout
 - **Redirecionamento automático**: Usuários não logados são redirecionados
 - **Interface responsiva**: Funciona em desktop e mobile
@@ -132,6 +141,7 @@ O projeto estará disponível em `http://localhost:3000`
 - **Componentes reutilizáveis**: Usando shadcn/ui
 
 ### 🔄 Funcionalidades principais:
+
 1. **Login/Cadastro**: Formulário único que alterna entre modos
 2. **Dashboard**: Página principal com lista de tarefas
 3. **Adicionar tarefa**: Campo de input com botão
@@ -158,6 +168,7 @@ O projeto estará disponível em `http://localhost:3000`
 ## 📱 Responsividade
 
 O projeto foi desenvolvido com mobile-first e é totalmente responsivo:
+
 - **Desktop**: Layout completo com sidebar
 - **Tablet**: Layout adaptado
 - **Mobile**: Interface otimizada para toque
@@ -179,8 +190,8 @@ O projeto foi desenvolvido com mobile-first e é totalmente responsivo:
 ## 📞 Suporte
 
 Para dúvidas ou problemas:
+
 1. Verifique se as variáveis de ambiente estão corretas
 2. Confirme se as tabelas do Supabase foram criadas
 3. Verifique se o RLS está configurado
 4. Consulte os logs do console para erros específicos
-
