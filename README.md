@@ -180,8 +180,8 @@ O projeto foi desenvolvido com mobile-first e é totalmente responsivo:
 
 ## 🔄 Próximos Passos
 
-1. Configurar RLS no Supabase
-2. Adicionar validação de email
+1. Configurar RLS no Supabase ✅
+2. Adicionar validação de email ✅
 3. Implementar recuperação de senha
 4. Adicionar categorias para tarefas
 5. Implementar filtros e busca
